@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import BannerImage from '../../../assets/banner_header.svg';
 
 export const Container = styled.div`
-  width: 100%;
-  margin: 0 auto;
   height: 774px;
   background: #eaf2f1;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Banner = styled.div`
@@ -16,7 +16,7 @@ export const Banner = styled.div`
   background: url(${BannerImage}), #043c35;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 125px;
+
   img {
     padding-top: 60px;
   }
@@ -26,12 +26,14 @@ export const Top = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  padding-left: 8%;
 `;
 
 export const Apresentation = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 8%;
 
   h1 {
     font-weight: 300;
@@ -121,9 +123,9 @@ export const Services = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 1176px;
   height: 395px;
-  margin: 40px auto;
+  justify-content: center;
+  padding-top: 40px;
 `;
 
 export const Service = styled.div`
@@ -140,4 +142,53 @@ export const Service = styled.div`
   border-radius: 4px;
 
   margin-left: 24px;
+  padding: 24px 0px 0px 32px;
+
+  h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #495057;
+  }
+
+  ul {
+    margin-top: 20px;
+    list-style-type: none;
+    padding-bottom: 24px;
+    color: #6c757c;
+    font-size: 14px;
+
+    li {
+      padding: 8px 0px 8px;
+    }
+  }
+`;
+
+export const Notation = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: #6c757c;
+  justify-content: space-around;
+  margin: 250px 0px;
+  font-size: 14px;
+
+  a {
+    color: #30b78e;
+  }
+
+  span {
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateX(10px);
+    }
+
+    svg {
+      margin: -4px 5px;
+      color: #30b78e;
+    }
+  }
 `;
